@@ -1,0 +1,4 @@
+﻿  laba offline dop.cpp
+C:\Users\polin\OneDrive\Рабочий стол\laba offline dop\laba offline dop.cpp(106,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\polin\OneDrive\Рабочий стол\laba offline dop\laba offline dop.cpp(116,25): warning C4101: ex: неиспользованная локальная переменная
+  laba offline dop.vcxproj -> C:\Users\polin\OneDrive\Рабочий стол\laba offline dop\x64\Debug\laba offline dop.exe

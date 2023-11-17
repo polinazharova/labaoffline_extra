@@ -1,0 +1,15 @@
+Initial data:
+X = 4
+Y = 5
+R = 10
+R = 256, G = 256, B = 256
+Square = 314
+Length = 62.8
+
+Final data:
+X = 13
+Y = 19
+R = 3
+R = 178, G = 186, B = 142
+Square = 28.26
+Length = 18.84
