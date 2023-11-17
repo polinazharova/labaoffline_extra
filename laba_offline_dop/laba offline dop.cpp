@@ -11,6 +11,7 @@ private:
 	int Y;
 	int R;
 public:
+	//getters
 	int getX() {
 		return X;
 	}
@@ -24,6 +25,7 @@ public:
 		return color;
 	}
 
+	//setters
 	void setX(int x) {
 		X = x;
 	}
@@ -37,6 +39,8 @@ public:
 		for (int i{ 0 }; i < 3; i++)
 			color[i] = col[i];
 	}
+
+	//constructors
 	Circle() {
 		X = 0;
 		Y = 0;
@@ -80,13 +84,14 @@ public:
 				color.push_back(0);
 		}
 	}
+	//obyavlenie vneshnih funkciy
 	double dlina();
 	double square();
 	void ColorRand();
 };
 
 
-
+//vneshnie funkcii
 double Circle::square() {
 	double sqr = PI * R * R;
 	return sqr;
@@ -101,14 +106,19 @@ void Circle::ColorRand() {
 	for (int i{ 0 }; i < 3; i++)
 		color[i] = rand() % 257;
 }
+
+
 int main() {
 
 	srand(time(NULL));
 
 	std::vector<int> new_vec = { 256,256,256 };
-
+	
+	//sozdayem object classa
 	Circle krug(4, 5, 10, new_vec);
 
+
+	//otkrivaem file
 	std::ofstream fout;
 	try {
 		fout.open("Circle.txt");
@@ -119,6 +129,7 @@ int main() {
 		return 0;
 	}
 
+	//zapisivaem v nego pervonachal'nie dannie v file
 	fout << "Initial data:" << std::endl;
 	fout << "X = " << krug.getX() << std::endl;
 	fout << "Y = " << krug.getY() << std::endl;
@@ -127,11 +138,14 @@ int main() {
 	fout << "Square = " << krug.square() << std::endl;
 	fout << "Length = " << krug.dlina() << std::endl;
 
+
+	//menyaem atributi classa 
 	krug.setX(13);
 	krug.setY(19);
 	krug.ColorRand();
 	krug.setR(3);
 
+	//zapisivaem novie dannie v file
 	fout << std::endl << "Final data:" << std::endl;
 	fout << "X = " << krug.getX() << std::endl;
 	fout << "Y = " << krug.getY() << std::endl;
