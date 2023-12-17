@@ -76,8 +76,12 @@ public:
     }
     //удалить весь стек
     void remove() {
-        for (int i{ 0 }; i < stack.size(); i++)
+        for (int i{ 0 }; i < N; i++) {
             delete (*stack[i]).getP();
+            stack[i] = nullptr;
+        }
+        stack.resize(0);
+        N = 0;
     }
 
     //перегружаем операцию присваивания для создании копии стека

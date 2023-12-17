@@ -36,7 +36,7 @@ int main()
     std::cout << "3 - Копировать весь стек в новый объект." << std::endl;
     std::cout << "4 - Добавить элемент в стек." << std::endl;
     std::cout << "5 - Удалить элемент из стека и вывести стек на экран." << std::endl;
-    std::cout << "6 - Удалить весь стек (выходит из программы)." << std::endl;
+    std::cout << "6 - Удалить весь стек." << std::endl;
     std::cout << "7 - Вывести информацию о длине стека." << std::endl;
     std::cout << "8 - Вывести стек в терминал. " << std::endl;
     
@@ -70,33 +70,18 @@ int main()
             ctuck.stackIsOverflow();
             break;
         case 3:
-        {  
             *stack_copy = ctuck;
             break;
-        }
         case 4:
             ctuck.push();
             break;
-
         case 5:
             ctuck.pop();
             break;
         case 6:
-        {
-            std::cout << "Бонус! Сейчас вам будут представлены два сложенные стека (один, который только что использовался," << std::endl;
-            std::cout << "а второй с рандомным количеством элементов), а так же полученный стек только с уникальными элементами и его инвертированная версия." << std::endl;
-
-            ctuck || new_one;
-            ctuck.reverse();
-            std::cout << std::endl;
-
-            ctuck.stackIsEmpty();
-            std::cout << "Спасибо за то, что выбрали именно нашу программу!" << std::endl;
-            std::cout << std::endl << "---------------------------------------" << std::endl;
-            delete stack_copy;
-            
-            return 0;
-        }
+            ctuck.remove();
+            std::cout << "----------" << "STACK HAS BEEN DELETED" << "----------" << std::endl;
+            break;
         case 7:
             ctuck.size();
             break;
